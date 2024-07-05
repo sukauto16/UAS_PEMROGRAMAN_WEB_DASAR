@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fanbase Anime</title>
+    <link rel="stylesheet" href="home_page.css">
+</head>
+<style>
+    .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333; 
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s; 
+        }
+        .navbar a:hover {
+            background-color: #555; 
+        }
+</style>
+<body>
+    <div class="navbar">
+        <a href="home_page.html">Home</a>
+        <a href="login_page.html">login</a>
+        <a href="profil _page.html">Profil</a>
+        <a href="contact_page.html">contact</a>
+
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Selamat Datang di Fanbase Anime</h1>
+        </header>
+        <main>
+            <section class="description">
+                <h2>Tentang Kami</h2>
+                <p>
+                    Selamat datang di fanbase anime kami! Kami adalah komunitas penggemar anime yang memiliki hasrat besar terhadap animasi Jepang. Fanbase kami didedikasikan untuk mendiskusikan, berbagi, dan merayakan segala hal tentang anime. Dari seri terbaru hingga favorit klasik, kami membahas semuanya. Bergabunglah dengan kami untuk terhubung dengan sesama penggemar, menemukan anime baru, dan berpartisipasi dalam acara serta diskusi seru.
+                </p>
+                <h2>Manfaat Menonton Anime</h2>
+                <p>
+                    Menonton anime lebih dari sekadar hobi; ini adalah pintu gerbang ke dunia kreativitas, budaya, dan pengalaman positif. Berikut beberapa manfaat memiliki hobi menonton anime:
+                </p>
+                <ul>
+                    <li>Meningkatkan Kreativitas: Anime sering menampilkan alur cerita yang unik dan imajinatif yang dapat menginspirasi kreativitas dan inovasi.</li>
+                    <li>Mendorong Kesadaran Budaya: Anime memberikan wawasan tentang budaya, tradisi, dan bahasa Jepang, memperluas pemahaman budaya Anda.</li>
+                    <li>Meredakan Stres: Terjun ke dalam cerita anime yang menarik bisa menjadi cara yang bagus untuk bersantai dan melarikan diri dari stres sehari-hari.</li>
+                    <li>Membangun Koneksi Sosial: Bergabung dengan komunitas penggemar anime membantu Anda bertemu dengan individu yang berpikiran sama dan membangun persahabatan yang langgeng.</li>
+                    <li>Meningkatkan Imajinasi: Genre yang beragam dan karakter yang kompleks dalam anime merangsang imajinasi Anda dan memperluas wawasan mental Anda.</li>
+                </ul>
+            </section>
+            <section class="gallery">
+                <h2>Galeri</h2>
+                <div class="image-grid">
+                    <img src="anime1.webp" alt="Anime 1">
+                    <img src="anime2.webp" alt="Anime 2">
+                    <img src="anime3.webp" alt="Anime 3">
+                    <img src="anime4.webp" alt="Anime 4">
+                    <img src="anime 5.webp" alt="Anime 5">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <h2>pilihan warna latar belakang</h2>
+            <div class="color-buttons">
+                <button onclick="changeBackground('#e0f7fa')" style="background-color: #e0f7fa;">Biru Muda</button>
+                <button onclick="changeBackground('#ffffff')" style="background-color: #ffffff; color: #000;">Putih</button>
+                <button onclick="changeBackground('#f0f0f0')" style="background-color: #f0f0f0;">Abu-abu</button>
+                <button onclick="changeBackground('#ffeb3b')" style="background-color: #ffeb3b;">Kuning</button>
+                <button onclick="changeBackground('#ffc0cb')" style="background-color: #ffc0cb;">Pink</button>
+            </div>
+            <p id="copyright"></p>
+        </footer>
+    </div>
+    </div>
+
+
+
+    <script>
+        function changeBackground(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        function updateCopyright() {
+            const year = new Date().getFullYear();
+            document.getElementById('copyright').innerText = `© ${year} Fanbase Anime. Hak cipta dilindungi.`;
+        }
+
+        updateCopyright();
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Kontak</title>
+    <link rel="stylesheet" href="contact_page.css">
+</head>
+<style>
+    .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333; 
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s; 
+        }
+        .navbar a:hover {
+            background-color: #555; 
+        }
+</style>
+<body>
+    <div class="navbar">
+        <a href="home_page.html">Home</a>
+        <a href="login_page.html">login</a>
+        <a href="profil _page.html">Profil</a>
+        <a href="contact_page.html">contact</a>
+
+    </div>
+
+
+    <div class="container">
+        <header>
+            <h1>Kontak Kami</h1>
+        </header>
+        <main>
+            <section class="contact-form">
+                <h2>Formulir Kontak</h2>
+                <form id="contactForm">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Masukan:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Kirim</button>
+                </form>
+            </section>
+            <section class="feedback-table">
+                <h2>Masukan yang Diterima</h2>
+                <table id="feedbackTable">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>Masukan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data akan ditambahkan di sini -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            const table = document.getElementById('feedbackTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+            
+            const nameCell = newRow.insertCell(0);
+            const emailCell = newRow.insertCell(1);
+            const messageCell = newRow.insertCell(2);
+            
+            nameCell.textContent = name;
+            emailCell.textContent = email;
+            messageCell.textContent = message;
+            
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>
